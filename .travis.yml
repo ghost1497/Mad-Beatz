@@ -1,14 +1,15 @@
-language: node_js
-node_js:
-  - "12.7.0"
-
-install:
-  - npm install
-  - npm install -g firebase-tools
-
-script:
-  - echo "Deploying"
-  - gatsby build
-
-after_success:
-  - firebase deploy --token $FIREBASE_TOKEN
+jobs:
+  include:
+    - stage: deploy master
+      if: branch = master
+      language: node_js
+      node_js:
+        - "12.7.0"
+      install:
+        - npm install
+        - npm install -g firebase-tools
+      script:
+        - echo "Deploying"
+        - gatsby build
+      after_success:
+        - firebase deploy --token $FIREBASE_TOKEN
