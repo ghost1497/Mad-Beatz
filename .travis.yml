@@ -2,12 +2,13 @@ language: node_js
 node_js:
   - "12.7.0"
 
+install:
+  - npm install -g firebase-tools
+  - npm install -g gatsby
+
 script:
   - echo "Deploying"
   - gatsby build
-
-install:
-  - npm install -g firebase-tools
 
 after_success:
   - firebase deploy --token $FIREBASE_TOKEN
