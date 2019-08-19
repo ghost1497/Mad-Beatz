@@ -1,0 +1,33 @@
+.background-video {
+}
+
+.video-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    margin-left: -5em;
+    z-index: -1;
+}
+
+.video-wrapper video {
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.home-page-content {
+    text-align: center;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    height: 10em;
+    display: block;
+    align-items: center;
+    justify-content: center
+}
